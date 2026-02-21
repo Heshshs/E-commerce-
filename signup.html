@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ANGAT.TV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1 class="auth-title">Sign Up</h1>
+            
+            <form id="signupForm" class="auth-form">
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Email" 
+                    class="auth-input" 
+                    required
+                >
+                
+                <input 
+                    type="text" 
+                    id="username" 
+                    placeholder="Username" 
+                    class="auth-input" 
+                    required
+                >
+                
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    class="auth-input" 
+                    required
+                >
+                
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    placeholder="Confirm Password" 
+                    class="auth-input" 
+                    required
+                >
+                
+                <div class="auth-submit">
+                    <button type="submit" class="auth-btn">Create Account</button>
+                </div>
+            </form>
+            
+            <p class="auth-link-text">
+                Already have an account? 
+                <a href="login.html" class="auth-link">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            if (username && password && email) {
+                // Store user data in localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('isLoggedIn', 'true');
+                
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>
