@@ -73,6 +73,8 @@ button {
     color: #f4a460;
     letter-spacing: 0.3em;
     font-weight: bold;
+    margin-bottom: 40px;
+    background-image:image("https://github.com/Heshshs/E-commerce-/blob/main/YourLie.jpg")
 }
 
 .search-container {
@@ -231,7 +233,7 @@ button {
 }
 
 .auth-card {
-    background: white;
+    background: linear-gradient(135deg, #e84949, #a88e8e);
     border-radius: 0.5rem;
     padding: 3rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
@@ -272,7 +274,7 @@ button {
 
 .auth-btn {
     padding: 0.75rem 3rem;
-    background: #6b6b6b;
+    background: #7b7a7a;
     color: white;
     border-radius: 50px;
     font-size: 1rem;
@@ -286,7 +288,7 @@ button {
 .auth-link-text {
     text-align: center;
     margin-top: 1.5rem;
-    color: #666;
+    color: #fff8f8;
 }
 
 .auth-link {
@@ -743,7 +745,7 @@ button {
 
 /* ===== AD BANNER ===== */
 .ad-banner {
-    background: linear-gradient(135deg, #f97316, #dc2626);
+    background: linear-gradient(135deg, #f91616, #2699dc);
     border-radius: 0.5rem;
     padding: 2rem;
     display: flex;
@@ -819,6 +821,8 @@ button {
 }
 
 @media (max-width: 768px) {
+
+    
     .logo-title {
         font-size: 2rem;
     }
